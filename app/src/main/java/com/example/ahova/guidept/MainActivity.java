@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Create a new intent to open the {@link NumbersActivity}
-                Intent numbersIntent = new Intent(MainActivity.this, ListActivity.class);
+                Intent numbersIntent = new Intent(MainActivity.this, PlacesList.class);
 
                 // Start the new activity
                 startActivity(numbersIntent);
