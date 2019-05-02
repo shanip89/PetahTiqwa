@@ -11,13 +11,14 @@ public class PlacesList extends AppCompatActivity {
 
 
     private RecyclerView.LayoutManager layoutManager;
-    private RecyclerView.Adapter mAdapter;
+    private MapAdapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list_me);
 
+        int index = getIntent().getIntExtra("index", 0);
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
@@ -27,6 +28,8 @@ public class PlacesList extends AppCompatActivity {
         cities.add(new Map (R.drawable.pthall, "The best musem you ever know", "want to know more?", R.drawable.artmap, "https://goo.gl/maps/93tiFYdWfU42"));
         mAdapter = new MapAdapter(this, cities);
         recyclerView.setAdapter(mAdapter);
+
+
     }
 }
 
