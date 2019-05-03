@@ -15,8 +15,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView numbers = (TextView) findViewById(R.id.open);
-        TextView diffrent = (TextView) findViewById(R.id.diffrent);
+        TextView numbers = findViewById(R.id.open);
+        TextView diffrent = findViewById(R.id.diffrent);
 
         // Set a click listener on that View
         numbers.setOnClickListener(new View.OnClickListener() {
@@ -34,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
         diffrent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
+
 
 
 
