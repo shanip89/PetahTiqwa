@@ -19,17 +19,17 @@ public class PlacesList extends AppCompatActivity {
         setContentView(R.layout.word_list_me);
 
         int index = getIntent().getIntExtra("index", 0);
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        ArrayList<Map> cities = new ArrayList<Map>();
+        ArrayList<Map> cities = new ArrayList<>();
         if (index == 0) {
             cities.add(new Map(R.drawable.ptmap, "Hello to the city", "it's about time", R.drawable.pthall, "https://goo.gl/maps/ECMsmAEDhzQ2"));
         } else if (index == 1) {
-            cities.add(new Map(R.drawable.ptmap, "The best musem you ever know", "want to know more?", R.drawable.artmap, "https://goo.gl/maps/93tiFYdWfU42"));
+            cities.add(new Map(R.drawable.ptmap, "The best musem you ever know", "want to know more?", R.drawable.ptmap, "https://goo.gl/maps/93tiFYdWfU42"));
         } else if (index == 2){
-            cities.add(new Map(R.drawable.ptsimbol, "hello me", "it's very important", R.drawable.ic_launcher_background, "https://goo.gl/maps/ECMsmAEDhzQ2"))
+            cities.add(new Map(R.drawable.ptsimbol, "hello me", "it's very important", R.drawable.ic_launcher_background, "https://goo.gl/maps/ECMsmAEDhzQ2"));
         }
         mAdapter = new MapAdapter(this, cities);
         recyclerView.setAdapter(mAdapter);
