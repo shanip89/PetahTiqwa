@@ -38,7 +38,7 @@ public class MapAdapter extends RecyclerView.Adapter<MapAdapter.ViewHolder> {
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = mLayoutInflater.inflate(R.layout.word_list_me, viewGroup, false);
+        View view = mLayoutInflater.inflate(R.layout.list_me, viewGroup, false);
         return new ViewHolder(view);
     }
 
